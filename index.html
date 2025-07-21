@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>SimulaInvest + IA Sofia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>SimulaInvest + IA Sofia</h1>
+    <p>Simule investimentos com dados reais de bancos, corretoras e fintechs.</p>
+  </header>
+
+  <section class="form-section">
+    <label for="instituicao">Escolha a Instituição:</label>
+    <select id="instituicao">
+      <option value="nubank">Nubank</option>
+      <option value="inter">Banco Inter</option>
+      <option value="xp">XP Investimentos</option>
+    </select>
+    <br><br>
+
+    <button onclick="simularCDB()">Simular CDB</button>
+    <button onclick="simularTesouro()">Simular Tesouro Selic</button>
+    <br><br>
+
+    <input type="text" id="tickerAcao" placeholder="Ex: AAPL">
+    <button onclick="simularAcao()">Buscar Ação</button>
+    <br><br>
+
+    <input type="text" id="tickerCripto" placeholder="Ex: BTC">
+    <button onclick="simularCripto()">Buscar Criptomoeda</button>
+  </section>
+
+  <section id="resultado" class="resultado-section">
+    <h2>Resultado da Simulação</h2>
+    <div id="resultadoTexto">Escolha uma instituição e um produto.</div>
+  </section>
+
+  <section id="ia-sofia" class="ia-section">
+    <h2>💡 IA Sofia Recomenda:</h2>
+    <div id="recomendacao">Aguarde a sugestão...</div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
