@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>SimulaInvest + IA Sofia</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -19,17 +19,20 @@
       <option value="xp">XP Investimentos</option>
     </select>
     <br><br>
-
     <button onclick="simularCDB()">Simular CDB</button>
     <button onclick="simularTesouro()">Simular Tesouro Selic</button>
     <br><br>
-
     <input type="text" id="tickerAcao" placeholder="Ex: AAPL">
     <button onclick="simularAcao()">Buscar Ação</button>
     <br><br>
-
     <input type="text" id="tickerCripto" placeholder="Ex: BTC">
     <button onclick="simularCripto()">Buscar Criptomoeda</button>
+  </section>
+
+  <section id="cotacoes" class="resultado-section">
+    <h2>🌎 Cotações em Tempo Real (AwesomeAPI)</h2>
+    <button onclick="buscarCotacoes()">Atualizar Cotações</button>
+    <ul id="cotacoesLista">Clique no botão acima.</ul>
   </section>
 
   <section id="resultado" class="resultado-section">
