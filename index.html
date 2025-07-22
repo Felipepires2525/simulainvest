@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>SimulaInvest + IA Sofia</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
   <header>
@@ -16,9 +17,26 @@
     <select id="instituicao">
       <option value="nubank">Nubank</option>
       <option value="inter">Banco Inter</option>
+      <option value="c6bank">C6 Bank</option>
       <option value="xp">XP Investimentos</option>
+      <option value="caixa">Caixa</option>
+      <option value="bb">Banco do Brasil</option>
+      <option value="original">Banco Original</option>
+      <option value="picpay">PicPay</option>
+      <option value="pagbank">PagBank</option>
+      <option value="mercadopago">Mercado Pago</option>
     </select>
     <br><br>
+
+    <label for="perfil">Escolha seu perfil de risco:</label>
+    <select id="perfil">
+      <option value="iniciante">Iniciante</option>
+      <option value="intermediario">Intermediário</option>
+      <option value="agressivo">Agressivo</option>
+      <option value="extremos">Extremos</option>
+    </select>
+    <br><br>
+
     <button onclick="simularCDB()">Simular CDB</button>
     <button onclick="simularTesouro()">Simular Tesouro Selic</button>
     <br><br>
@@ -30,9 +48,15 @@
   </section>
 
   <section id="cotacoes" class="resultado-section">
-    <h2>🌎 Cotações em Tempo Real (AwesomeAPI)</h2>
+    <h2>🌎 Cotações em Tempo Real</h2>
     <button onclick="buscarCotacoes()">Atualizar Cotações</button>
     <ul id="cotacoesLista">Clique no botão acima.</ul>
+  </section>
+
+  <section class="resultado-section">
+    <h2>📊 Indicadores Econômicos (BCB)</h2>
+    <button onclick="buscarIndicadores()">Atualizar Indicadores</button>
+    <ul id="indicadoresLista">Clique no botão acima.</ul>
   </section>
 
   <section id="resultado" class="resultado-section">
